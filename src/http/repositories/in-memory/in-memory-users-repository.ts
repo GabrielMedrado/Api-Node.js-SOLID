@@ -28,13 +28,3 @@ export class InMemoryUsersRepository implements IUsersRepository {
     return user;
   }
 }
-
-// {
-//     async findByEmail(email) {
-//       return null;
-//     },
-
-//     async create(data) {
-//
-//     },
-//   }
