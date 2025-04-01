@@ -3,13 +3,13 @@ import { IUsersRepository } from "../repositories/users-repository-interface";
 import { UserAlreadyExistsError } from "./errors/user-alredy-exists-error";
 import { User } from "@prisma/client";
 
-interface registerServiceRequest {
+interface IRegisterServiceRequest {
   name: string;
   email: string;
   password: string;
 }
 
-interface RegisterServiceResponse {
+interface IRegisterServiceResponse {
   user: User;
 }
 
@@ -19,7 +19,7 @@ export class RegisterService {
     name,
     email,
     password,
-  }: registerServiceRequest): Promise<RegisterServiceResponse> {
+  }: IRegisterServiceRequest): Promise<IRegisterServiceResponse> {
     const password_hash = await hash(password, 6);
 
     const userWithTheSameEmail = await this.usersRepository.findByEmail(email);
