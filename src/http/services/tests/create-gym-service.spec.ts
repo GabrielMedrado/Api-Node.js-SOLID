@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import { InMemoryGymsRepository } from "@/http/repositories/in-memory/in-memory-gyms-repository";
 import { beforeEach, describe, expect, it } from "vitest";
-import { InMemoryGymsRepository } from "../repositories/in-memory/in-memory-gyms-repository";
-import { CreateGymService } from "./create-gym-service";
+import { CreateGymService } from "../create-gym-service";
 
 let gymsRepository: InMemoryGymsRepository;
 let sut: CreateGymService;
