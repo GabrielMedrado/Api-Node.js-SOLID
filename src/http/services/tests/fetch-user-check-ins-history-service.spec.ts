@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import { InMemoryCheckInsRepository } from "@/http/repositories/in-memory/in-memory-check-ins-repository";
 import { beforeEach, describe, expect, it, afterEach, vi } from "vitest";
-import { InMemoryCheckInsRepository } from "../repositories/in-memory/in-memory-check-ins-repository";
-import { CheckInService } from "./check-in-service";
-import { FetchUserCheckInsHistoryService } from "./fetch-user-check-ins-history-service";
+import { FetchUserCheckInsHistoryService } from "../fetch-user-check-ins-history-service";
 
 let checkInsRepository: InMemoryCheckInsRepository;
 let sut: FetchUserCheckInsHistoryService;

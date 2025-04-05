@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { beforeEach, describe, expect, it, afterEach, vi } from "vitest";
-import { InMemoryCheckInsRepository } from "../repositories/in-memory/in-memory-check-ins-repository";
-import { CheckInService } from "./check-in-service";
-import { InMemoryGymsRepository } from "../repositories/in-memory/in-memory-gyms-repository";
+import { InMemoryCheckInsRepository } from "../../repositories/in-memory/in-memory-check-ins-repository";
+import { CheckInService } from "../check-in-service";
+import { InMemoryGymsRepository } from "../../repositories/in-memory/in-memory-gyms-repository";
 import { Decimal } from "@prisma/client/runtime/library";
-import { MaxNumberOfCheckInsError } from "./errors/max-number-of-check-ins-error";
-import { MaxDistanceError } from "./errors/max-distance-error";
+import { MaxNumberOfCheckInsError } from "../errors/max-number-of-check-ins-error";
+import { MaxDistanceError } from "../errors/max-distance-error";
 
 let checkInsRepository: InMemoryCheckInsRepository;
 let gymRepository: InMemoryGymsRepository;
