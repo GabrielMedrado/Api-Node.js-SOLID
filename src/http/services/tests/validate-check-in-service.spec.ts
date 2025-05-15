@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import { InMemoryCheckInsRepository } from "@/http/repositories/in-memory/in-memory-check-ins-repository";
 import { beforeEach, describe, expect, it, afterEach, vi } from "vitest";
-import { InMemoryCheckInsRepository } from "../../repositories/in-memory/in-memory-check-ins-repository";
-
-import { ValidateCheckInService } from "../validate-check-in-service";
 import { ResourceNotFoundError } from "../errors/resource-not-found-error";
-import { aw } from "vitest/dist/chunks/reporters.D7Jzd9GS";
+import { ValidateCheckInService } from "../validate-check-in-service";
 
 let checkInsRepository: InMemoryCheckInsRepository;
 let sut: ValidateCheckInService;
