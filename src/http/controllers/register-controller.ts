@@ -3,7 +3,10 @@ import { z } from "zod";
 import { UserAlreadyExistsError } from "../services/errors/user-alredy-exists-error";
 import { MakeRegisterService } from "../services/factories/make-register-service";
 
-export async function register(request: FastifyRequest, reply: FastifyReply) {
+export async function registerController(
+  request: FastifyRequest,
+  reply: FastifyReply,
+) {
   const registerBodySchema = z.object({
     name: z.string(),
     email: z.string().email(),

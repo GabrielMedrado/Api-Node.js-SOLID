@@ -3,7 +3,7 @@ import { z } from "zod";
 import { InvalidCredentialsError } from "../services/errors/invalid-credentials-error";
 import { MakeAuthenticateService } from "../services/factories/make-authenticate-service";
 
-export async function authenticate(
+export async function authenticateController(
   request: FastifyRequest,
   reply: FastifyReply,
 ) {
