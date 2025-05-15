@@ -1,8 +1,8 @@
 import { Gym, Prisma } from "@prisma/client";
-import { IFindManyNearby, IGymsRepository } from "./gyms-repository-interface";
+import { IFindManyNearby, IGymsRepository } from "../gyms-repository-interface";
 import { prisma } from "@/lib/prisma";
 
-export class IPrismaGymsRepository implements IGymsRepository {
+export class PrismaGymsRepository implements IGymsRepository {
   async findById(id: string) {
     const gym = await prisma.gym.findUnique({
       where: {
