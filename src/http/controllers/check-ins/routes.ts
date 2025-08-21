@@ -10,9 +10,9 @@ import { historyGymController } from "./history-controller";
 export async function checkInsRoutes(app: FastifyInstance) {
   app.addHook("onRequest", verifyJWT);
 
-  app.get("/gyms/metrics", metricsGymController);
+  app.get("/check-ins/metrics", metricsGymController);
   app.get("/check-ins/history", historyGymController);
 
-  app.post("/gyms/:gymId/check-ins", createCheckInController);
+  app.post("/gym/:gymId/check-ins", createCheckInController);
   app.patch("/check-ins/:checkInId/validate", validateCheckInController);
 }
